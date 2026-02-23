@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+.hero {
+  background: linear-gradient(-45deg, black, #111, #222, #000);
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.dark {
+  background: #111;
+}
+
+.highlight {
+  background: #222;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #111;
+  padding: 25px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: yellow;
+  transform: translateY(-8px);
+}
+
+.rules {
+  list-style: none;
+  line-height: 2;
+  font-size: 1.1rem;
+}
+
+.green { color: #00ff88; }
+.red { color: #ff4444; }
+.yellow { color: #ffcc00; }
+
+.btn-yellow {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #ffcc00;
+  color: black;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.btn-yellow:hover {
+  background: #ffaa00;
+}
+
+.slider {
+  overflow: hidden;
+  max-width: 600px;
+  margin: auto;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slide 12s infinite;
+}
+
+.slide {
+  width: 100%;
+  padding: 20px;
+}
+
+@keyframes slide {
+  0% {transform: translateX(0);}
+  33% {transform: translateX(-100%);}
+  66% {transform: translateX(-200%);}
+  100% {transform: translateX(0);}
+}
+
+.faq p {
+  margin-bottom: 20px;
+}
+
+.floating-cta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffcc00;
+  color: black;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.floating-social {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #00ff88;
+  color: black;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+footer {
+  background: #000;
+  padding: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+}
